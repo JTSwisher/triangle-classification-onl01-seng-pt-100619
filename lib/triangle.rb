@@ -7,7 +7,7 @@ class Triangle
    @s3 = s3
  end 
  
- def kind(s1,s2,s3)
+ def kind
    if s1 == s2 && s2 == s3 
      :equilateral
    elsif s1 == s2 || s2 == s3 || s1 == s3
