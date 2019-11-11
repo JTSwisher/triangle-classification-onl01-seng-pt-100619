@@ -1,16 +1,16 @@
 class Triangle
- attr_reader :a, :b, :c 
+ attr_reader :s1, :s2, :s3 
  
- def initialize(a,b,c)
-   @a = a 
-   @b = b 
-   @c = c 
+ def initialize(s1,s2,s3)
+   @s1 = s1 
+   @s2 = s2 
+   @s3 = s3
  end 
  
- def kind(a,b,c)
-   if a == b && b == c 
+ def kind(s1,s2,s3)
+   if s1 == s2 && s2 == s3 
      :equilateral
-   elsif a == b || b == c || a == c
+   elsif s1 == s2 || s2 == s3 || s1 == s3
      :isoceles 
    else 
      :scalene 
@@ -18,7 +18,7 @@ class Triangle
  end 
  
  class TraingleError < StandardError 
- end 
+  end 
  
  
 end
