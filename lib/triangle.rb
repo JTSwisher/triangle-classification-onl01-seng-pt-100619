@@ -10,9 +10,9 @@ class Triangle
  def kind(a,b,c)
    if a == b && b == c 
      :equilateral
-   elsif a == b || b == c
+   elsif a == b || b == c || a == c
      :isoceles 
-   else a != b && b != c && a != c  
+   else 
      :scalene 
    end 
  end 
