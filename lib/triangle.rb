@@ -25,5 +25,6 @@ class Triangle
  end 
  
  class TriangleError < StandardError 
+   "Your triangle is invalid, please enter in three valid sides."
  end 
 end
