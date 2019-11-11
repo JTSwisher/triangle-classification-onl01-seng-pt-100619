@@ -7,17 +7,24 @@ class Triangle
    @s3 = s3
  end 
  
- def kind
+ def kind(s1,s2,s3)
+   valid_triangle 
    if s1 == s2 && s2 == s3 
      :equilateral
    elsif s1 == s2 || s2 == s3 || s1 == s3
-     :isosceles 
+     :isoceles 
    else 
      :scalene 
    end 
  end 
+
+ def valid_triangle 
+    real_triangle = [(s1 + s2 > s3), (s2 + s3 > s1), (s1 + s3 > s2)]
+    (s1,s2,s3).each {|s| real_triangle << false if s <= 0}
+    raise triangle_error if real_triangle.incllude? false 
+ end 
  
- class TraingleError < StandardError 
+ class TriangleError < StandardError 
   end 
  
  
