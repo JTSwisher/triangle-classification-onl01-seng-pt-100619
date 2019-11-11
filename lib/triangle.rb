@@ -14,7 +14,7 @@ class Triangle
      :isoceles 
    else a != b && b != c && a != c  
      :scalene 
-   
+   end 
  end 
  
  class TraingleError < StandardError 
